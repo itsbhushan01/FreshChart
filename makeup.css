@@ -1,0 +1,1169 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins", sans-serif;
+}
+.container{
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Buy btn */
+
+.buy-btn i{
+    margin-right: 5px;
+}
+.buy-btn button{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding:20px 25px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgb(22, 22, 48);
+    border: none;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+/* navbar */
+
+
+nav{
+    width: 85%;
+    margin: 30px auto;
+    position: relative;
+}
+nav .box{
+    display: flex;
+    justify-content: space-between;
+}
+nav .icon i{
+    color: grey;    
+    font-size: 20px;
+    padding:8px 5px;
+}
+nav .link{
+    margin-top: 20px;
+    position: relative;
+}
+nav .link a{
+    color: rgb(114, 105, 105);
+    font-size: 14px;
+    padding: 10px ;
+    margin-right: 15px;
+    z-index: 100000;
+}
+nav .link li{
+    display: inline-block;
+    z-index:1;
+    
+}
+
+nav .link li:first-child a{
+    color: white;
+    background-color: rgb(13, 175, 13);
+    border-radius: 5px;
+
+}
+
+
+/* link dropdown */
+
+
+nav .link li .dropdown{
+    width: 200px;
+    position: absolute;
+    top: 70px;
+    padding-bottom: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 4px rgb(44, 39, 39);
+    border-radius: 10px;
+    opacity: 0;
+    z-index: -1;
+    transition: all ease .7s;
+}
+nav .link li .dropdown li{
+    font-size: 13px;
+    margin-top: 8px;
+    font-weight: 500;
+    padding: 2px 15px;
+    color: grey;
+    width: 100%;
+}
+nav .link li .dropdown li:hover{
+    background-color: #eee;
+    color: green;
+    cursor: pointer;
+}
+nav .link li:hover .dropdown{
+    opacity: 1;
+    z-index: 1;
+    top: 45px;
+}
+
+
+/* .Mega-menu .dropdown */
+
+nav .Mega-menu {
+    display: flex;
+    justify-content: space-between;
+    position: absolute; 
+    top: 70px;
+    left: 0px;
+    width: 100%;
+    box-shadow: 0px 0px 5px rgb(142, 137, 137);
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    z-index: -1;
+    opacity: 0;
+    transition: all ease .8s;
+    }
+nav .link li:nth-child(5):hover .Mega-menu{
+       opacity: 1;
+       z-index: 1;
+       top: 45px;
+      }
+nav .Mega-menu .menu{
+    flex-basis: 20%;
+    margin-right: 25px;
+   
+}
+nav .Mega-menu .menu li{
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
+    color: rgb(106, 105, 105);
+}
+nav .Mega-menu .menu li:hover{
+    background-color: #eee;
+    cursor: pointer;
+    transition: .2s;
+    color: green;
+}
+nav .Mega-menu .menu li:first-child{
+    color: green;
+    font-weight: 600;
+}
+nav .Mega-menu .menu:last-child{
+    background-image: url('../image/banner-deal.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: fill;
+    width: 100%;
+}
+nav .menu .txt{
+    margin: 20px 30px;
+}
+nav .menu .txt h3{
+    color: white;
+    font-weight: 500;
+}
+nav .menu button{
+    margin-top: 20px;
+    padding: 9px 18px;
+    color: white;
+    background-color: rgb(13, 175, 13);
+    border: none;
+    border-radius: 8px;
+}
+nav  i{
+    padding-left: 5px;
+    position: relative;
+}
+nav .icon i span{
+    top: -5px;
+    right: -5px;
+    position: absolute;
+    padding: 5px 8px;
+    border-radius: 50%;
+    color: white;
+    font-size: 9px;
+    font-weight: 600;
+    background-color: rgb(13, 175, 13);
+}
+nav .icon .humber{
+    display: none;
+    color: rgb(13, 175, 13);
+}
+
+nav .box .search-bar input{
+    width: 450px;
+    height: 40px;
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(138, 138, 137, 0.507);
+    outline: none;
+    font-size: 15px;
+    position: relative;
+}
+nav .box .search-bar input:focus{
+  border: 5px solid  rgba(28, 206, 28, 0.223);
+}
+nav .box .search-bar button{
+    padding: 9px 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.614);
+    color: white;
+    background-color: rgb(31, 188, 19);
+    font-size: 14px;
+}
+nav .box .search-bar>i{
+    position: absolute;
+}
+nav .box .search-bar button i{
+    padding-right: 3px;
+}
+
+
+
+
+
+
+.offcanvasss{
+    position: fixed;
+      top: 0;
+      right: -500px;
+      width: 500px;
+      height: 100%;
+      background-color: #fff;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.541);
+      transition: 0.3s;
+      padding: 20px;
+      overflow: auto;
+      z-index: 30;
+    }
+    .offcanvasss.active{
+      right: 0;
+      
+    }
+    .close-button{
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    font-size: 24px;
+      cursor: pointer;
+    }
+    .close-button:hover{
+      background-color: rgb(78, 78, 78);
+      color: rgb(248, 248, 248);
+      border-radius: 50%;
+      
+    }
+
+    
+    .offcanvass{
+        position: fixed;
+          top: 0;
+          right: -500px;
+          width: 500px;
+          height: 100%;
+          background-color: #fff;
+          box-shadow: -2px 0 5px rgba(0, 0, 0, 0.541);
+          transition: 0.3s;
+          padding: 20px;
+          overflow: auto;
+          z-index: 30;
+      }
+      .offcanvass.active{
+          right: 0px;
+          
+      }
+      .close-button{
+          position: absolute;
+          top: 10px;
+          left: 10px;
+       font-size: 24px;
+          cursor: pointer;
+      }
+      .close-button:hover{
+          background-color: rgb(78, 78, 78);
+          color: rgb(248, 248, 248);
+          border-radius: 50%;
+          
+      }
+      .open-buttons{
+        position:absolute;
+        top: 25px;
+        color: green;
+       font-size: 24px;
+       cursor: pointer;
+      
+      
+      }
+
+
+
+      .listCard li{
+        display: grid;
+        grid-template-columns: 100px repeat(3,1fr);
+        row-gap: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0px 0px 3px lightblue;
+      }
+      .listCard li div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+      }
+      .listCard img{
+        width: 100%;
+      }
+      .listCard button{
+        width: auto;
+        padding:10px 14px;
+        color: white;
+        border-radius: 5px;
+        font-weight: 500;
+        border: none;
+        background-color: green;
+        font-size: 22px;
+        margin: 10px;
+      }
+      .listCard .count{
+        margin: 0 10px;
+      }
+
+
+
+
+
+.carditem{
+    display: flex;
+    border-bottom: 1px solid lightblue;
+    padding: 10px;
+    justify-content: space-between;
+}
+.carditem h4{
+    font-size: 14px;
+    font-weight: 500;
+}
+.carditem .button{
+    display: flex;
+    width: 50px;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+/* -------------------nav bar is end here------------------ */
+
+
+
+header {
+    width: 85%;
+    height: 500px;
+    margin:20px auto;
+    background-image: url(../image/slide-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    animation: show 1s linear;
+    box-shadow: 0px 0px 5px gray;
+}
+@keyframes show {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+        
+    }
+}
+@keyframes move {
+    100%{
+        padding-top: 70px;
+    }
+}
+header .txt{
+    padding-top: 90px;
+   padding-left: 7%;
+   width: 30%;
+   animation: move 1s linear infinite alternate;
+}
+header .txt span{
+    background-color: orange;
+    border-radius: 10px;
+    padding:2px 10px;
+    font-size: 13px;
+    position: relative;
+    opacity: 0;
+    animation: grows .7s linear infinite alternate;
+}
+
+@keyframes grows {
+    100%{
+       opacity: 1;
+    }
+}
+
+
+header .txt h1{
+    font-size: 40px;
+    font-weight: 600;
+    color: rgb(22, 22, 48);
+    margin-top: 10px;
+}
+header .txt p{
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 5px;
+    color: rgb(90, 89, 89);
+}
+header button{
+    margin-top: 20px;
+    padding: 9px 18px;
+    color: white;
+    background-color: rgb(22, 22, 48);
+    border: none;
+    border-radius: 8px;
+    transition: .4s;
+    position: relative;
+    z-index: 1;
+}
+
+header i{
+    padding-left: 5px;
+}
+
+
+/* -----------------header is end here ---------------*/
+
+
+.sec-1{
+    width: 85%;
+    margin: 50px auto;
+}
+.sec-1 h1{
+    font-size: 25px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.745);
+}
+.sec-1 .boxes{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    position: relative;
+}
+.sec-1 .boxes .box{
+    border: 1px solid rgba(0, 0, 0, 0.147);
+    margin-top: 20px;
+    padding: 10px;
+   flex-basis: 16%;
+   text-align: center;
+   aspect-ratio: 1;
+   border-radius: 10px;
+   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.205);
+  
+}
+.sec-1 .boxes .box:hover{
+    box-shadow: 0px 0px 3px gray;
+    border: 1px solid green;
+   
+}
+.sec-1 .boxes .box img{
+    width: 100%;
+}
+.sec-1 .boxes .box p{
+    text-align: center;
+    color: gray;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.slider-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    border: 1px solid rgba(0, 0, 0, 0.171);
+    margin-top: 10px;
+    margin-left: 3%;
+    margin-right: 3%;
+    border-radius: 3px;
+  }
+  .slider-container{
+    position: relative;
+    width: 90%;
+    overflow: hidden;
+  }
+  .slider{
+    display: flex;
+    transition: transform 0.4s ease;
+  }
+  .slides{
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+    
+  }
+  .arrow{
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    border: 1px solid black;
+    padding: 8px 16px;
+    z-index: 10;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 24px;
+
+  }
+  .left-arrow{
+    left: 10px;
+  }
+  .right-arrow{
+    right: 10px;
+  }
+  .arrow:hover{
+    background-color: lightblue;
+  }
+  .arrow:active{
+    transform: translateY(-50%) scale(0.95);
+  }
+
+/* ---------------sec-2 is end here--------------- */
+
+
+.sec-2{
+    width: 85%;
+    margin: 30px auto;
+    display: flex;
+}
+.sec-2 .box-1{
+    background-image: url('../image/grocery-banner.png');
+    border-radius: 30% 0px;
+}
+.sec-2 .box-2{
+    background-image: url('../image/grocery-banner-2.jpg');
+    border-radius: 0px 30%;
+}
+.sec-2 .box{
+    margin-top: 20px;
+    flex-basis: 48%;
+    height: 200px;
+    margin-right: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 0px 5px gray;
+}
+.sec-2 .box .txt{
+    margin: 50px 0 0 35px;
+    
+}
+.sec-2 .txt h3{
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(32, 32, 68);
+}
+.sec-2 .txt p{
+    font-size: 13px;
+    color: rgb(107, 106, 106);
+    margin-top: 5px;
+}
+.sec-2 .txt button{
+    margin-top: 10px;
+    padding: 8px 18px;
+    color: white;
+    background-color: rgb(22, 22, 48);
+    border: none;
+    border-radius: 8px;
+}
+
+
+/* ------------------sec-2 is end here------------------- */
+
+
+
+.sec-3{
+    width: 85%;
+    margin: 50px auto;
+}
+.sec-3 .boxes{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 20px;
+}
+.sec-3 h1{
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.773);
+}
+.sec-3 .boxes .box{
+    border-radius: 9px;
+    border: 1px solid rgb(208, 213, 207);
+}
+.sec-3 .boxes .box:hover{
+   box-shadow: 0px 0px 3px gray;
+    border: 1px solid rgb(30, 255, 0);
+   
+}
+
+
+.sec-3 .top{
+    position:  relative;
+}
+.sec-3 .boxes .box .top .img{
+    width: 100%;
+    text-align: center;
+}
+.sec-3 .top img{
+    width: 100%;
+}
+.sec-3 .top .txt{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.sec-3 .top .txt span{
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    padding:2px 8px;
+    border-radius: 3px;
+    animation: grow .5s linear infinite alternate;
+   
+    opacity: 0;
+}
+.sec-3 .top .txt p{
+    text-align: center;
+    background-color: green;
+    color: white;
+    font-size: 10px;
+    padding:2px 8px;
+    border-radius: 3px;
+    margin-top: 5px;
+    
+}
+.sec-3 .btm{
+    width: 100%;
+    padding-left: 20px;
+    position: relative;
+    line-height: px;
+}
+.sec-3 .btm p{
+    font-size: 11px;
+    color: gray;
+    
+}
+.sec-3 .btm h6{
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.805);
+}
+.sec-3 .btm .star i{
+    font-size: 12px;
+    color: gold;
+}
+.sec-3 .btm .star span{
+    font-size: 13px;
+}
+.sec-3 .btm h6{
+    margin: 4px 0;
+}
+.sec-3 .btm h5{
+    margin: 15px 0;
+    font-weight: 600;
+}
+.sec-3 .btm h5 span{
+    font-size: 12px;
+   
+    text-decoration: line-through;
+    color: gray;
+}
+.sec-3 .btm button{
+    background-color: rgb(62, 210, 62);
+    color: white;
+    font-weight: 500;
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+    position: absolute;
+    right: 15px;
+    bottom: 0px;
+}
+.sec-3 .btm button:hover{
+    background-color: green;
+}
+/* -----------------.sec-3 is end here------------------ */
+
+
+.sec-4{
+    width: 85%;
+    margin: 50px auto;
+}
+.sec-4 h1{
+    font-size: 25px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.663);
+}
+.sec-4 .boxes{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.sec-4 .box-1{
+    height: 400px;
+    background-image: url('../image/banner-deal.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sec-4 .box-1 .txt{
+    margin: 40px 20px;
+}
+.sec-4 .box-1 .txt h3{
+    font-size: 23px;
+    font-weight: 600;
+    color: white;
+}
+.sec-4 .box-1 .txt p{
+    color: white;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.sec-4 .box-1 .txt button{
+    padding: 8px 15px;
+    margin-top: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(33, 220, 33);
+}
+.sec-4 .box{
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.334);
+    border-radius: 10px;
+    flex-basis: 23%;
+    
+}
+.sec-4 .box:hover{
+    box-shadow: 0px 0px 5px green;
+}
+.sec-4 .box .top {
+    width: 70%;
+    margin: 0 auto;
+}
+.sec-4 .box .top img{
+    width: 100%;
+}
+.sec-4 .box .btm{
+    width: 100%;
+    padding-left: 20px;
+    position: relative;
+}
+.sec-4 .btm p{
+    font-size: 11px;
+    color: gray;
+    
+}
+.sec-4 .btm h4{
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.805);
+   
+}
+.sec-4 .btm .icon{
+    position: absolute;
+    right: 10px;
+    bottom: 130px;
+}
+.sec-4 .btm .icon i{
+    font-size: 12px;
+    color: gold;
+}
+.sec-4 .btm .icon span{
+    color: rgba(0, 0, 0, 0.732);
+    font-size: 13px;
+}
+.sec-4 .btm h4{
+    margin: 4px 0;
+    color: rgba(0, 0, 0, 0.936);
+    font-weight: 500;
+}
+.sec-4 .btm h4 span{
+    font-size: 12px;
+    text-decoration: line-through;
+    color: gray;
+}
+.sec-4 .bttn{
+    width: 100%;
+    margin-top: 20px;
+}
+.sec-4 .bttn button{
+    width: 95%;
+    height: 40px;
+    color: white;
+    background-color: rgb(33, 220, 33);
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+}
+.sec-4 .bttn button:hover{
+    background-color: rgb(34, 180, 33);
+}
+.sec-4 .time{
+    width: 95%;
+    display: flex;
+    margin: 15px 0;
+}
+.sec-4 .time .times{
+    width: 23%;
+    padding: 10px 0;
+    margin: 0 3px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.14);
+}
+.sec-4 .time  h2,p{
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* -----------------.sec-4 is end here-------------------- */
+
+
+.sec-5{
+    width: 85%;
+    margin: 50px auto;
+}
+.sec-5 .boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.sec-5 .boxes .box{
+    flex-basis: 23%;
+}
+.sec-5 .box .img {
+    width: 100%;
+}
+.sec-5 .img i{
+    font-size: 35px;
+    color: rgb(36, 215, 36);
+}
+.sec-5 .txt h3{
+    margin-top: 15px;
+    font-size: 17px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.775);
+}
+.sec-5 .txt p{
+    margin-top: 5px;
+    color: gray;
+    font-size: 14px;
+    font-weight: 500;
+    word-spacing: 5px;
+}
+
+
+/* --------------------sec-5 is end here-------------------- */
+
+
+footer{
+    background-color: rgba(0, 0, 0, 0.075);
+    padding-bottom: 50px;
+}
+.footer{
+    width: 85%;
+    margin: 50px auto;
+}
+footer .boxes{
+    width: 100%;
+    margin: 50px auto;
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer .boxes .box{
+    flex-basis: 15%;
+    margin-bottom: 50px;
+}
+footer .boxes .box li{
+    font-size: 14px;
+    margin-top: 7px;
+    color: rgba(0, 0, 0, 0.559);
+}
+footer .boxes .box p{
+    color: rgb(30, 255, 0);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+footer .payment{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 10px 0;
+}
+footer .pay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer .img{
+    margin-top: 8px;
+    margin-left: 10px;
+}
+footer .pay p{
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.755);
+}
+footer .pay-2 .img{
+    width: 20%;
+    display: flex;
+}
+footer .pay-2 img{
+    width: 100%;
+    margin-right: 5px;
+}
+footer .copyright{
+    display: flex;
+    justify-content: space-between;
+    padding:15px 10px;
+}
+footer .copyright p,span{
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.504);
+}
+footer .copyright .box1 span{
+    color: rgb(36, 215, 36);
+}
+
+footer .copyright .icon i{
+    color: rgba(0, 0, 0, 0.421);
+    border: 1px solid rgba(0, 0, 0, 0.419);
+    padding: 5px;
+    border-radius: 30%;
+}
+
+
+
+
+
+
+
+
+
+
+@keyframes grow {
+    100%{
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:991px) {
+    .container{
+        width: 80%;
+    }
+    nav .link{
+        display: none;
+    }
+    nav .icon .humber{
+        display: inline-block;
+    }
+    nav .box .search-bar{
+        display: none;
+    }
+
+    header{
+        height: 400px;
+    }
+    header .txt{
+        width: 45%;
+        padding: 10% 0 0 10%;
+    }
+    header .txt span{
+        font-size: 11px;
+    }
+    header .txt h1{
+        font-size: 28px;
+    }
+    header .txt p{
+        font-size: 13px;
+    }
+
+    .sec-1 .boxes .box{
+        flex-basis: 32%;
+    }
+
+    .sec-3 .boxes{
+       grid-template-columns: repeat(3,1fr);
+       grid-template-rows: repeat(5,1fr);
+    }
+    .sec-3 .btm p{
+        font-size: 11px;
+    }
+    .sec-3 .btm h6{
+        font-size: 12px;
+    }
+    .sec-3 .btm button{
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .sec-4 .box{
+        margin-top: 20px;
+        flex-basis: 48%;
+    }
+    .sec-5 .boxes .box{
+        flex-basis: 48%;
+        margin-top: 20px;
+    }
+
+    footer .boxes .box{
+        flex-basis: 30%;
+       
+    }
+    footer .payment{
+        flex-direction: column;
+        justify-content: center;
+    }
+    footer .copyright .icon span{
+        display: block;
+    }
+}
+
+@media screen and (max-width:768px) {
+    header .txt{
+        width: 70%;
+        padding: 15% 0 0 10%;
+    }
+    .sec-1 .boxes .box{
+        flex-basis: 48%;
+    }
+    .sec-2 {
+        flex-direction: column;
+    }
+    .sec-2 .box{
+        flex-basis: 98%;
+    }
+    .sec-2 .box .txt{
+        padding-bottom: 50px;
+    }
+    .sec-3 .boxes{
+        grid-template-columns: repeat(2,1fr);
+     }
+     
+     .sec-4 .box{
+        flex-basis: 70%;
+        margin: 20px auto;
+     }
+     .sec-5 .boxes .box{
+        flex-basis: 100%;
+        margin-top: 50px;
+     }
+
+     footer .boxes .box{
+        flex-basis: 50%;
+     }
+     footer .pay{
+        flex-direction: column;
+    }
+    footer .copyright{
+        flex-direction: column;
+        
+    }
+    footer .copyright .icon{
+        margin-top: 20px;
+    }
+   
+    
+}
+@media screen and (max-width:425px) {
+    .container{
+        width: 100%;
+    }
+    nav .box .logo{
+        width: 100%;
+        text-align: center;
+    }
+    nav .box{
+        flex-direction: column;
+    }
+    nav .box .icon{
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+    header .txt{
+        width: 70%;
+    }
+    header .txt span{
+        font-size: 10px;
+    }
+    header .txt h1{
+        font-size: 25px;
+    }
+
+    .sec-1 .boxes .box{
+        flex-basis: 98%;
+    }
+    .sec-3 .boxes{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .sec-4 .boxes .box{
+        flex-basis: 98%;
+    }
+    footer .boxes .box{
+        flex-basis: 98%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

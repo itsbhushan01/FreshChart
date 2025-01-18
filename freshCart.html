@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="../image/logo.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/makeup.css">
+    <title>Home | Freshchart - eCommerce Theme</title>
+</head>
+<body>
+    <div class="container-fluid">
+
+        <!-- Buy now Button is here -->
+
+        <div class="buy-btn">
+            <button><i class="fa-solid fa-cart-plus"></i>Buy Now</button>
+        </div>
+
+
+        <!-- navbar is here -->
+        <nav>
+            <div class="box">
+
+                <!-- logo is here -->
+
+                <div class="logo">
+                    <img src="../image/freshcart-logo.svg" alt="">
+                </div>
+
+                <!-- search bar -->
+
+                <div class="search-bar">
+                    <input type="search" placeholder="Search For Product...">
+                    
+                    <button><i class="fa-solid fa-location-dot"></i>Location</button>
+                </div>
+
+                <!-- icons is here -->
+                 <div class="icon">
+
+                    <!-- notification button is here -->
+
+                    <i class="fa-regular fa-heart" id="openSidebar">
+                        <span>0</span>
+                    </i>
+
+                    <div id="offcanvass" class="offcanvass">
+                        <button id="closeSidebar" class="btn close-button"><i class="bi bi-x-lg"></i></button>
+                        <h2>Notifications</h2>
+                        <hr>
+                      <img src="image/empty-search-results.354500b5 (1).svg" class="offcanvass-img"/>
+                      <h5 class="text-center pt-2">No Notifications Right Now</h5>
+                      <p class="text-center text-muted">You are up to date</p>
+                      <button class="btn btn-success px-3" style="margin-left: 35%;">Continue Shopping</button>
+        
+                    </div>
+
+
+                    <!-- ligin /register button is here -->
+
+                    <i class="fa-regular fa-user" data-bs-toggle="modal" data-bs-target="#exampleModal1"></i>
+
+
+                    <div class="modal fade "  id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog " >
+                          <div class="modal-content " style="width: 600px;">
+                            
+                              
+                              
+                          
+                             <div class="modal-body p-0"> 
+                              <div class="d-flex">
+                                <div class="img-div w-75">
+                                  <img src="image/svgviewer-png-output.png" class="img-fluid"/>
+                                </div>
+                                <div class="number-div w-100 ps-3">
+                                  <div class="modal-header">
+                                    <p class="h6 text-center">Let’s Get You Logged In</p>
+                                    <button type="button" class="btn-close sign-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <p class="text-muted pt-2">Enter your 10 digit mobile number</p>
+                                  <input type="text" placeholder="+91" class="number-input"/>
+                                  <p class="pt-2">By continuing, you agree to our Terms, <span class="text-success">Refunds </span>and <span class="text-success">Privacy Policy</span></p>
+                                  <button class="btn btn-secondary continue" disabled> Continue</button>
+                                </div>
+                              </div>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+        
+
+                      <!-- shopping card button is here -->
+
+
+                    <i class="fa-solid fa-bag-shopping" id="openCartSidebar">
+                        <span class="quantity">0</span>
+                    </i>
+
+
+
+
+                    <div id="offcanvasss" class="offcanvasss">
+                        <button id="closeCartSidebar" class="btn close-button"><i class="bi bi-x-lg"></i></button>
+                       <div class="d-flex justify-content-evenly">
+                        <div class="border-end border-3 pe-3 ">My Cart <sup class="quantity2">0</sup> items</div>
+                        <div class="d-flex justify-content-around">
+                          <div class="">
+                            <div>Saving</div>
+                            <div class="h5 totalsaving">&#8377;</div>
+                          </div>
+                          <div class="ms-4">
+                            <div>Card Total</div>
+                            <div class="h5 total">&#8377;</div>
+                          </div>
+                        </div>
+                       </div>
+        
+        
+                        <hr>
+        
+                      <!-- Add your selected item is display here   -->
+                    
+                      <ul class="listCard">
+                        
+                       </ul>
+                       
+                       <p class="text-danger  border border-danger p-2">minimum order amount &#8377;500</p>
+                        <button class="btn btn-outline-success px-3" style="margin-left: 35%;">Checkout</button>
+                      
+                      </div>
+        
+
+                    <i class="humber fa-solid fa-bars-progress"></i>
+                    
+                </div>
+            </div>
+
+
+            <!-- navbar first is end here -->
+
+            <!-- navbar links is strat -->
+
+            
+            <div class="link">
+                
+                <li class="links"> 
+                    <a href="" class="active"><i class="fa-solid fa-shapes"></i> All Departments </a>
+                    <ul class="dropdown">
+                        <li>Dairy Bread & Eggs</li>
+                        <li>Snacks & Munchies</li>
+                        <li>Fruit & Vegetables</li>
+                        <li>Cold Drinks & juices</li>
+                        <li>BreakFast & Instant Food</li>
+                        <li>Bakery & Biscuit</li>
+                        <li>Chicken Meet & Fish</li>
+                    </ul>
+                </li>
+               <li class="links">
+                    <a href="">Home <i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="dropdown">
+                        <li>Home Default</li>
+                        <li>Home Mordern</li>
+                        <li>Home Creative</li>
+                        <li>Home Local Store</li>
+                        <li>Home Minimalist</li>
+                        
+                    </ul>
+                </li>
+                <li class="links">
+                    <a href="">Shop <i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="dropdown">
+                        <li>Dairy Bread & Eggs</li>
+                        <li>Snacks & Munchies</li>
+                        <li>Fruit & Vegetables</li>
+                        <li>Home Local Store</li>
+                        <li>Home Minimalist</li>
+                        <li>Cold Drinks & juices</li>
+                        <li>BreakFast & Instant Food</li>
+                        <li>Bakery & Biscuit</li>
+                        <li>Home Local Store</li>
+                        <li>Home Minimalist</li>
+                    </ul>
+                </li>
+                <li class="links">
+                    <a href="">Stores <i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="dropdown">
+                        <li>Store List</li>
+                        <li>Store Grid</li>
+                        <li>Store Single</li>
+                    </ul>
+                </li>
+                <li class="links">
+                    <a href="">Mega menu <i class="fa-solid fa-caret-down"></i></a>
+                    <div class="Mega-menu">
+                        
+                            <ul class="menu">
+                                <li>Dairy ,Bread & Egg</li>
+                                <li>Snacks & Munchies</li>
+                                <li>Fruit & Vegetables</li>
+                                <li>Home Local Store</li>
+                                <li>Home Minimalist</li>
+                                <li>Cold Drinks & juices</li>
+                                <li>BreakFast & Instant Food</li>
+                                <li>Bakery & Biscuit</li>
+                                <li>Home Local Store</li>
+                                <li>Home Minimalist</li>
+                            </ul>
+                            <ul class="menu">
+                                <li>Home Local Store</li>
+                                <li>Snacks & Munchies</li>
+                                <li>Fruit & Vegetables</li>
+                                <li>Home Local Store</li>
+                                <li>Home Minimalist</li>
+                                
+                            </ul>
+                            <ul class="menu">
+                                <li>Snacks & Munchies</li>
+                                <li>Snacks & Munchies</li>
+                                <li>Fruit & Vegetables</li>
+                                <li>Home Local Store</li>
+                                <li>Home Minimalist</li>
+                                <li>Cold Drinks & juices</li>
+                                <li>BreakFast & Instant Food</li>
+                                
+                            </ul>
+                            <div class="menu">
+                                <div class="txt">
+                                    <h3>Don't Miss this Offer Today</h3>
+                                    <button>Shop Now</button>
+                                </div>
+                            </div>
+                        
+                    </div>
+                </li>
+                <li class="links">
+                     <a href="">Pages <i class="fa-solid fa-caret-down"></i></a>
+                     <ul class="dropdown">
+                        <li>Blog Signal</li>
+                        <li>Blog Categaory</li>
+                        <li>About us</li>
+                        <li>Contact</li>
+                        <li>Home Minimalist</li>
+                    </ul>
+                </li>
+                <li class="links">
+                    <a href="">Account <i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="dropdown">
+                        <li>Sign In</li>
+                        <li>Sign Up</li>
+                    </ul>
+                </li>
+                <li class="links"><a href="">Dashboard</a></li>
+                <li class="links"><a href="">Docs</a></li>
+                <span></span>
+            </div>
+            
+        </nav>  
+
+
+
+
+
+        <!------------------ navigation is end here -------------------------->
+
+
+
+        <hr>
+
+
+        <header>
+            <div class="box">
+                <div class="txt">
+                    <span>opening sale discount 50%</span>
+                    <h1>SuperMarket For Fresh Grocery</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ut  id!</p>
+                    <button>Shop Now <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+            
+        </header>
+
+
+
+        <!----------------------- header is end here ----------------------->
+
+
+
+        <!-- <section class="sec-1 slider-parent">
+           
+            <div class="slider-container">
+                <button class="btn arrow left-arrow" id="prevArrow">&lt;</button>
+                <div class="boxes slider" id="slider">
+                    <div class="box slides">
+                        <img src="../image/category-cold-drinks-juices.jpg" alt="">
+                        <p>Fruit & vegitable</p>
+                    </div>
+                    <div class="box slides" >
+                        <img src="../image/category-dairy-bread-eggs.jpg" alt="">
+                        <p>Dairy & Bread</p>
+                    </div>
+                    <div class="box slides" >
+                        <img src="../image/category-bakery-biscuits.jpg" alt="">
+                        <p>Bakery</p>
+                    </div>
+                    <div class="box slides">
+                        <img src="../image/category-snack-munchies.jpg" alt="">
+                        <p>Snack & Munchies</p>
+                    </div>
+                    <div class="box slides" >
+                        <img src="../image/category-bakery-biscuits.jpg" alt="">
+                        <p>Biscuit</p>
+                    </div>
+                    <div class="box slides" >
+                        <img src="../image/category-tea-coffee-drinks.jpg" alt="">
+                        <p>Tea, Cofee & Drink</p>
+                    </div>
+                </div>
+                <button class="btn arrow right-arrow"  id="nextArrow">&gt;</button>
+            </div>
+        </section> -->
+
+
+
+
+
+        <!----------------------- sec-1 is end here --------------------->
+
+
+
+
+
+
+        <section class="sec-2">
+            <div class="box box-1">
+                <div class="txt">
+                    <h3>Fruit & Vegitable</h3>
+                    <p>Get Upto 30% Off</p>
+                    <button>Shop Now</button>
+                </div>
+            </div>
+            <div class="box box-2">
+                <div class="txt">
+                    <h3>Freshly Baked Buns</h3>
+                    <p>Get Upto 30% Off</p>
+                    <button>Shop Now</button>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!----------------------- sec-2 is end here --------------------->
+
+
+
+
+        <section class="sec-3">
+            <h1>Popular Product</h1>
+            <div class="boxes" id="productList">
+               
+            </div>
+        </section>
+
+
+
+
+
+    <!----------------------- sec-3 is end here --------------------->
+
+
+
+
+        <section class="sec-4">
+            <h1>Daily Best Sells</h1>
+            <div class="boxes">
+                <div class="box box-1">
+                    <div class="txt">
+                        <h3>100% Organic Coffee Beans</h3>
+                        <p>Get the Best Deal Before Close</p>
+                        <button>Shop Now <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="top">
+                        <img src="../image/product-img-11.jpg" alt="">
+                    </div>
+                    <div class="btm">
+                        <p>Tea, Coffee & Drinks</p>
+                        <h4>Roast Ground Cofee</h4>
+                        <h4>$13.5 <span>$18</span></h4>
+                        <div class="icon">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half"></i>
+                            <span>4.3 (4)</span>
+                        </div>
+                        <div class="bttn">
+                            <button onclick="addToCart(this)">+Add to card</button>
+                        </div>
+                        <div class="time">
+                            <div class="days times">
+                                
+                            </div>
+                            <div class="hour times">
+                                
+                            </div>
+                            <div class="minute times">
+                                
+                            </div>
+                            <div class="secound times">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="top">
+                        <img src="../image/product-img-12.jpg" alt="">
+                    </div>
+                    <div class="btm">
+                        <p>Fruit & Vegitable</p>
+                        <h4>Crushed Tomatoes</h4>
+                        <h4>$13.5 <span>$18</span></h4>
+                        <div class="icon">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half"></i>
+                            <span>4.3 (4)</span>
+                        </div>
+                        <div class="bttn">
+                            <button onclick="addToCart(this)">+Add to card</button>
+                        </div>
+                        <div class="time">
+                            <div class="days times">
+                                
+                            </div>
+                            <div class="hour times">
+                                
+                            </div>
+                            <div class="minute times">
+                                
+                            </div>
+                            <div class="secound times">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="top">
+                        <img src="../image/product-img-13.jpg" alt="">
+                    </div>
+                    <div class="btm">
+                        <p>Fruit & Vegitable</p>
+                        <h4>Golden Pineapple</h4>
+                        <h4>$13.5 <span>$18</span></h4>
+                        <div class="icon">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half"></i>
+                            <span>4.3 (4)</span>
+                        </div>
+                        <div class="bttn">
+                            <button onclick="addToCart(this)">+Add to card</button>
+                        </div>
+                        <div class="time">
+                            <div class="days times">
+                                
+                            </div>
+                            <div class="hour times">
+                                
+                            </div>
+                            <div class="minute times">
+                                
+                            </div>
+                            <div class="secound times">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+
+
+
+<!----------------------- sec-4 is end here --------------------->
+
+
+
+
+        <section class="sec-5">
+            <div class="boxes">
+                <div class="box">
+                    <div class="img">
+                        <i class="fa-regular fa-clock"></i>
+                    </div>
+                    <div class="txt">
+                        <h3>10 Minute Grocery now</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis quas facere repudiandae commodi quo?</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="img">
+                        <i class="fa-solid fa-gift"></i>
+                    </div>
+                    <div class="txt">
+                        <h3>Best Price & Offers</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In soluta obcaecati laborum totam consectetur est?</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="img">
+                        <i class="fa-solid fa-box-open"></i>
+                    </div>
+                    <div class="txt">
+                        <h3>Wide Assortment</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam excepturi vitae ab, ut delectus animi.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="img">
+                        <i class="fa-solid fa-rotate"></i>
+                    </div>
+                    <div class="txt">
+                        <h3>Easy Returns</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptates nihil consequatur aliquam nulla eos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+<!----------------------- sec-5 is end here --------------------->
+
+
+        <footer>
+            <div class="footer">
+                <div class="boxes">
+                    <div class="box">
+                        <p>Categories</p>
+                        <li>Vegetables & Fruit</li>
+                        <li>Breakfast & instant food</li>
+                        <li>Bakery & Biscuits</li>
+                        <li>Atta, rice & dal</li>
+                        <li>Sauces & spreads</li>
+                        <li>Baby care</li>
+                        <li>Cleaning essentials</li>
+                        <li>Personal care</li>
+                        <li>Organic & gourmet</li>
+                    </div>
+                    <div class="box">
+                        <p>Products</p>
+                        <li>Dairy, bread & eggs</li>
+                        <li>Cold drinks & juices</li>
+                        <li>Tea, coffee & drinks</li>
+                        <li>Masala, oil & more</li>
+                        <li>Sauces & spreads</li>
+                        <li>Baby care</li>
+                        <li>Cleaning essentials</li>
+                        <li>Home & Office</li>
+                        <li>Pet Care</li>
+                    </div>
+                    <div class="box">
+                        <p>Get to know us</p>
+                        <li>Company</li>
+                        <li>About</li>
+                        <li>Blog</li>
+                        <li>Help Center</li>
+                        <li>Our Value</li>
+                    </div>
+                    <div class="box">
+                        <p>For Customers</p>
+                        <li>Payments</li>
+                        <li>Shipping</li>
+                        <li>Product Returns</li>
+                        <li>Faq</li>
+                        <li>Shop Checkout</li>
+                    </div>
+                    <div class="box">
+                        <p>Become a Shopper</p>
+                        <li>Shopper Opportunities</li>
+                        <li>Become a shopper</li>
+                        <li>Earning </li>
+                        <li>Idea & Guides</li>
+                        <li>Net Retailers</li>
+                    </div>
+                    <div class="box">
+                        <p>Freshchart programms</p>
+                        <li>Freshchart programms</li>
+                        <li>Gift Cards</li>
+                        <li>Promos & Coupons</li>
+                        <li>Freshchart Ads</li>
+                        <li>Careers</li>
+                    </div>
+                </div>
+                <hr>
+                <div class="payment">
+                    <div class="pay pay-1">
+                        <p>Payment Partners</p>
+                        <div class="img">
+                            <img src="../image/amazonpay.svg" alt="">
+                            <img src="../image/mastercard.svg" alt="">
+                            <img src="../image/paypal.svg" alt="">
+                            <img src="../image/visa.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="pay pay-2">
+                        <p>Get Deliveries With freshcart</p>
+                        <div class="img">
+                            <img src="../image/appstore-btn.svg" alt="">
+                            <img src="../image/googleplay-btn.svg " alt="">
+                        </div>
+                    </div>
+                </div>
+                <hr>    
+                <div class="copyright">
+                    <div class="box1">
+                        <p>@ 2022 - 2024 FreshChart HTML Template.All right reserved.Powerved by <span>Codder.</span></p>
+                    </div>
+                    <div class="icon">
+                        <span>Follow us on</span>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                    </div>
+                </div>
+            </div>
+            
+        </footer>
+    </div>
+    <script src="../JavaScript/Script.js"></script>
+</body>
+</html>
